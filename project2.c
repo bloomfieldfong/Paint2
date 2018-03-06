@@ -1,3 +1,8 @@
+/*
+	@@Author: Michelle Bloomfield 16803
+	@@name: project2.c
+*/
+
 #include<conio.h>
 #include<stdio.h>
 #include<mouse.c>
@@ -6,7 +11,7 @@
 #include<figuras.c>
 
 void main(void){
-
+	//puntos definidos de todos los objetos
 	int x1 = 30, y1 = 30, x2 = 30, y2 = 80, x3 = 80, y3 = 30, x4 = 80, y4 = 80, ycentro = 5, xcentro = 55;
 	int x5 = 50, x6 = 60, x7 = 50, x8 = 60, x9 = 65, x10 = 75, x11 = 65, x12 = 75;
 	int y5 = 65, y6 = 65, y7 = 80, y8 = 80, y9 = 50, y10 = 50, y11 = 60, y12 = 60;
@@ -14,6 +19,7 @@ void main(void){
 	int y13 = 70, y14 = 70, y15 = 70, y16 = 70, y17 = 80, y18 = 80, ycentro2 = 35;
 	int x,a,b,c,e,r;
 	char teclado;
+	//instrucciones
 	printf("Transfromacion de linea: 1\n");
 	printf("Transfromacion relleno: 2\n");
 	printf("CASA\n");
@@ -23,8 +29,8 @@ void main(void){
 	printf(" d = mover hacia la derecha\n");
 	printf(" e = aumentar el tamaño\n");
 	printf(" r = disminuir el tamaño\n");
-	printf(" f = shred hacia la izquierda\n");
-	printf(" g = shred hacia la derecha\n");
+	printf(" f = shear hacia la izquierda\n");
+	printf(" g = shear hacia la derecha\n");
 	printf("ARBOL\n");
 	printf(" u = mover hacia arriba\n");
 	printf(" j = mover hacia abajo\n");
@@ -32,8 +38,8 @@ void main(void){
 	printf(" k = mover hacia la derecha\n");
 	printf(" l = aumentar el tamaño\n");
 	printf(" ; = disminuir el tamaño\n");
-	printf(" o = shred hacia la izquierda\n");
-	printf(" p = shred hacia la derecha\n");
+	printf(" o = shear hacia la izquierda\n");
+	printf(" p = shear hacia la derecha\n");
 	getch();
    	setVideo();
 	teclado = getch();
@@ -42,6 +48,8 @@ while(teclado!=(char)27){
 	teclado = getch();
 	switch(teclado){
 		case (char)49:
+
+				//casa
 				linea(x1,y1,x2,y2,3);
 			   	linea(x1,y1,x3,y3,3);
 			   	linea(x3,y3,x4,y4,3);
@@ -57,7 +65,6 @@ while(teclado!=(char)27){
 			   	linea(x11,y11,x12,y12,3);
 			   	linea(x9,y9,x11,y11,3);
 			   	linea(x10,y10,x12,y12,3);
-
 			   	//arbol
 			   	linea(x13,y13,xcentro2,ycentro2,3);
 			   	linea(xcentro2,ycentro2,x16,y16,3);
@@ -347,7 +354,9 @@ while(teclado!=(char)27){
 					x11-=3;
 					x12-=3;
 					xcentro-= 13;
-///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////ARBOL///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////				
 				}
 				//traslacion para derecha
 				if(teclado == 107){
@@ -517,7 +526,9 @@ while(teclado!=(char)27){
 			//while
 				}
 				break;
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////FILL///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////	
 		case (char)50:	
 
 				while(teclado!=(char)27){
@@ -804,7 +815,9 @@ while(teclado!=(char)27){
 					x12-=3; 
 					xcentro-= 13;
 				}	
-/////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////ARBOL///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////	
 				//traslacion para derecha
 				if(teclado == 107){
 					//ramas
